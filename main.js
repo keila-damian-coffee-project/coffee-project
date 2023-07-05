@@ -1,11 +1,10 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    let html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    let html = '<div class="coffee">';
+    html += '<header>' + coffee.name + '</header>';
+    html += '<p>' + coffee.roast + '</p>';
+    html += '</div>';
 
     return html;
 }
@@ -23,7 +22,7 @@ function updateCoffees(e) {
     let selectedRoast = roastSelection.value;
     let filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+        if (coffee.roast === selectedRoast.toLowerCase()) {
             filteredCoffees.push(coffee);
         }
     });
