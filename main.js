@@ -11,7 +11,7 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     let html = '';
-    for(let i = coffees.length - 1; i >= 0; i--) {
+    for (let i = coffees.length - 1; i >= 0; i--) {
         html += renderCoffee(coffees[i]);
     }
     return html;
@@ -21,7 +21,7 @@ function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     let selectedRoast = roastSelection.value;
     let filteredCoffees = [];
-    coffees.forEach(function(coffee) {
+    coffees.forEach(function (coffee) {
         if (coffee.roast === selectedRoast.toLowerCase()) {
             filteredCoffees.push(coffee);
         }
@@ -47,6 +47,30 @@ let coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+let all = reversedCoffees();
+function reversedCoffees(array) {
+
+    return coffees.reverse('[]');
+}
+// // checking functionality
+let all = reversedCoffees();
+
+function myFunction(element) {
+
+}
+
+            // our function for trying to get the string from the array of objects
+// function returnTyped (coffees) {
+//     let userInput = ''
+//     const typedCoffees = [];
+//     for(let i = 0; i < coffees.length;i += 1) {
+//         if(coffees[i].roast === userInput.toLowerCase();
+//
+//     }
+// }
+
+
+
 let tbody = document.querySelector('#coffees');
 let submitButton = document.querySelector('#submit');
 let roastSelection = document.querySelector('#roast-selection');
@@ -55,7 +79,3 @@ tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 
-// any new code we apply
-// function typedCoffees () {
-//
-// }
