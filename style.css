@@ -7,3 +7,16 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+
+/*.coffees>  {*/
+/*    display: none;*/
+/*}*/
+
+hr {
+    width: 95%;
+    border-color: #F5F5F5;
+    opacity: 50%;
+}
+.container {
+    margin-top: 5px;
+}

@@ -4,31 +4,128 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-    <h1>Coffee!</h1>
+<!--        header-->
+<nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            Bootstrap
+        </a>
+    </div>
+</nav>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+<h1 style="text-align: center">Coffee!</h1>
+<hr></hr>
+<!--    HERO section, 2 columns, 1 row-->
+<main class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <h2>Coffee Data</h2>
+            <div>
+                <!--            light options-->
+                <div class="classID">
+                    <h3>Light City</h3>
+                    <h4>light</h4>
+                </div>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+                <div class="classID">
+                    <h3>Half City</h3>
+                    <h4>light</h4>
+                </div>
 
-    <script src="main.js"></script>
+                <div class="classID">
+                    <h3>Cinnamon</h3>
+                    <h4>light</h4>
+                </div>
+                <!--                medium options-->
+                <div class="classID">
+                    <h3>City</h3>
+                    <h4>Medium</h4>
+                </div>
+
+                <div class="classID">
+                    <h3>American</h3>
+                    <h4>Medium</h4>
+                </div>
+
+                <div class="classID">
+                    <h3>Breakfast</h3>
+                    <h4>Medium</h4>
+                </div>
+                <!--            dark options-->
+                <div class="classID">
+                    <h3>High</h3>
+                    <h4>dark</h4>
+                </div>
+
+                <div class="classID">
+                    <h3>Continental</h3>
+                    <h4>dark</h4>
+                </div>
+
+                <div class="classID">
+                    <h3>New Orleans</h3>
+                    <h4>dark</h4>
+                </div>
+
+                <div class="classID">
+                    <h3>European</h3>
+                    <h4>dark</h4>
+                </div>
+
+                <div class="classID">
+                    <h3>Espresso</h3>
+                    <h4>dark</h4>
+                </div>
+
+                <div class="classID">
+                    <h3>Viennese</h3>
+                    <h4>dark</h4>
+                </div>
+
+                <div class="classID">
+                    <h3>Italian</h3>
+                    <h4>dark</h4>
+                </div>
+
+                <div class="classID">
+                    <h3>French</h3>
+                    <h4>dark</h4>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <form>
+                <label for="roast-selection"></label>
+                <select id="roast-selection">
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+                <input id="submit" type="submit"/>
+            </form>
+
+        </div>
+    </div>
+
+
+</main>
+<!--    <table>-->
+<!--        <thead>-->
+<!--            <tr>-->
+<!--                <th">ID</th>-->
+<!--                <th>NAME</th>-->
+<!--                <th>ROAST</th>-->
+<!--            </tr>-->
+<!--        </thead>-->
+<!--        <tbody id="coffees"></tbody>-->
+<!--    </table>-->
+
+<script src="main.js"></script>
 </body>
 </html>
