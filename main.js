@@ -20,10 +20,14 @@ function renderCoffees(coffees) {
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     let selectedRoast = roastSelection.value;
+    let searchValue = searchInput.value.trim().toLowerCase(); // Get the search term and convert to lowercase
     let filteredCoffees = [];
     coffees.forEach(function (coffee) {
-        if (coffee.roast === selectedRoast.toLowerCase()) {
+        if (coffee.roast === selectedRoast && coffee.name.toLowerCase().includes(searchValue)) {
             filteredCoffees.push(coffee);
+        } else if (coffee.roast.toLowerCase().includes(searchValue) || roastSelection === "all"){
+            filteredCoffees.push(coffee);
+
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
@@ -46,18 +50,18 @@ let coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
+//
+// let all = reversedCoffees();
+// function reversedCoffees(array) {
+//
+//     return coffees.reverse('[]');
+// }
+// // // checking functionality
+// let all = reversedCoffees();
 
-let all = reversedCoffees();
-function reversedCoffees(array) {
-
-    return coffees.reverse('[]');
-}
-// // checking functionality
-let all = reversedCoffees();
-
-function myFunction(element) {
-
-}
+// function myFunction(element) {
+//
+// }
 
             // our function for trying to get the string from the array of objects
 // function returnTyped (coffees) {
@@ -74,8 +78,10 @@ function myFunction(element) {
 let tbody = document.querySelector('#coffees');
 let submitButton = document.querySelector('#submit');
 let roastSelection = document.querySelector('#roast-selection');
+let searchInput = document.querySelector("#coffee-name")
 
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+searchInput.addEventListener("input", updateCoffees)
 
