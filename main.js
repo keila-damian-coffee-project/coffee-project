@@ -23,10 +23,10 @@ function updateCoffees(e) {
     let searchValue = searchInput.value.trim().toLowerCase(); // Get the search term and convert to lowercase
     let filteredCoffees = [];
     coffees.forEach(function (coffee) {
-        if (coffee.roast === selectedRoast && coffee.name.toLowerCase().includes(searchValue)) {
+        if(coffee.roast.toLowerCase().includes(searchValue) || roastSelection === "all"){
             filteredCoffees.push(coffee);
-        } else if (coffee.roast.toLowerCase().includes(searchValue) || roastSelection === "all"){
-            filteredCoffees.push(coffee);
+        } else if (coffee.roast === selectedRoast && coffee.name.toLowerCase().includes(searchValue)) {
+                filteredCoffees.push(coffee);
 
         }
     });
@@ -51,11 +51,11 @@ let coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 //
-// let all = reversedCoffees();
-// function reversedCoffees(array) {
-//
-//     return coffees.reverse('[]');
-// }
+let all = reversedCoffees();
+function reversedCoffees(array) {
+
+    return coffees.reverse('[]');
+}
 // // // checking functionality
 // let all = reversedCoffees();
 
