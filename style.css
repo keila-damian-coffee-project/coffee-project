@@ -7,3 +7,24 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+header{
+    background-color: #E1DBC5;
+}
+
+.bg-body-tertiary-hero {
+    background-color:#E1DBC5;
+}
+hr{
+    width: 95%;
+}
+button, select {
+    text-transform: none;
+    width: 100%;
+}
+button, input {
+    margin: 10px;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    width: 100%;
+}
