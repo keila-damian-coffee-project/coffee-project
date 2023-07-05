@@ -30,33 +30,33 @@
                         <h2>Coffee Data</h2>
                         <div>
                             <!-- Light options -->
-                            <div class="classID">
+                            <div class="coffee" style="display: none;">
                                 <h3>Light City</h3>
                                 <h4>light</h4>
                             </div>
 
-                            <div class="classID">
+                            <div class="coffee">
                                 <h3>Half City</h3>
                                 <h4>light</h4>
                             </div>
 
-                            <div class="classID">
+                            <div class="coffee">
                                 <h3>Cinnamon</h3>
                                 <h4>light</h4>
                             </div>
 
                             <!-- Medium options -->
-                            <div class="classID">
+                            <div class="coffee">
                                 <h3>City</h3>
                                 <h4>Medium</h4>
                             </div>
 
-                            <div class="classID">
+                            <div class="coffee">
                                 <h3>American</h3>
                                 <h4>Medium</h4>
                             </div>
 
-                            <div class="classID">
+                            <div class="coffee">
                                 <h3>Breakfast</h3>
                                 <h4>Medium</h4>
                             </div>
@@ -67,8 +67,8 @@
         <!-- Start of Column 2-->
             <div class="col-lg-6 col-sm-12">
                 <div class="d-flex flex-column gap-4">
-                    <h5>Roast</h5>
                     <form>
+                    <h5>Roast</h5>
                         <label for="roast-selection"></label>
                         <select id="roast-selection">
                             <option class="all-roast-selection">all</option>
@@ -81,9 +81,24 @@
                             <label for="coffee-name"></label>
                             <input type="text" id="coffee-name" required>
                         </form>
-
                         <input id="submit" type="submit" />
+                    <hr style="width: 100%">
                     </form>
+<!--                    add a coffee, right side-->
+                    <h1 style="text-align: center;">Add a Coffee</h1>
+                    <label for="roast-selection"></label>
+                    <select id="roast-selection">
+                        <option class="all-roast-selection">all</option>
+                        <option class="light-roast-selection">light</option>
+                        <option class="medium-roast-selection">medium</option>
+                        <option class="dark-roast-selection">dark</option>
+                    </select>
+                    <form id="coffee-form">
+                        <h5 class="mt-3">Coffee Name</h5>
+                        <label for="coffee-name"></label>
+                        <input type="text" id="coffee-name" required>
+                    </form>
+                    <input id="submit" type="submit" />
                 </div>
             </div>
         </div>
@@ -92,7 +107,7 @@
 
 
 
-    <!--    <table>-->
+<!--        <table>-->
 <!--        <thead>-->
 <!--            <tr>-->
 <!--                <th">ID</th>-->
