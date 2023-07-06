@@ -1,12 +1,12 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
-}
+/*table {*/
+/*    border-collapse: collapse;*/
+/*    margin: 15px 0;*/
+/*}*/
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
-}
+/*td, th {*/
+/*    border: 1px solid black;*/
+/*    padding: 5px 10px;*/
+/*}*/
 header{
     background-color: #E1DBC5;
 }
@@ -18,16 +18,28 @@ hr{
     width: 95%;
 }
 
-button, select {
-    text-transform: none;
-    width: 100%;
+nav.navbar{
+
+    background-color: rgba(0, 0, 0, 0.37);
+    background-blend-mode: multiply;
 }
-button, input {
-    margin: 10px;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-    width: 100%;
+.navbar-nav .nav-link.active-hero{
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    font-weight:lighter;
+    font-size: 10px;
+}
+
+.navbar-nav {
+    --bs-nav-link-padding-x: 0;
+    --bs-nav-link-padding-y: 0.5rem;
+    --bs-nav-link-font-weight: ;
+    --bs-nav-link-hover-color: red;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
 }
 button {
     padding: 10px 20px;
@@ -44,26 +56,290 @@ button {
     user-select: none;
 }
 
-#btn:hover,:focus {
+#btun:hover,:focus {
     color: #ffffff;
-    background: #008cff;
-    border: 1px solid #008cff;
+    background: #D10D8C;
+    border: 1px solid #D10D8C;
     text-shadow: 0 0 5px #ffffff,
     0 0 10px #ffffff,
     0 0 20px #ffffff;
-    box-shadow: 0 0 5px #008cff,
-    0 0 20px #008cff,
-    0 0 50px #008cff,
-    0 0 100px #008cff;
+    box-shadow: 0 0 5px #D10D8C,
+    0 0 20px #D10D8C,
+    0 0 50px #D10D8C,
+    0 0 100px #D10D8C;
     font-size: 16px;
     border-color: transparent;
 }
-/*body{*/
-/*    background-image: url("img/cyber.gif");*/
-/*    background-size:cover;*/
-/*    background-repeat: no-repeat;*/
+.btun-outline-success-hero {
+    color:#D10D8C;
+    border-color: #D10D8C;
+    border-radius: 8px;
+}
+#btun-nav:hover,:focus {
+    color: #ffffff;
+    background: #D959E3;
+    border: 1px solid #D959E3;
+    text-shadow: 0 0 5px #ffffff,
+    0 0 10px #ffffff,
+    0 0 20px #ffffff;
+    box-shadow: 0 0 5px #D959E3,
+    0 0 20px #D959E3,
+    0 0 50px #D959E3,
+    0 0 100px #D959E3;
+    font-size: 16px;
+    border-color: transparent;
+    border-radius: 25px;
 
-/*}*/
-/*img{*/
+}
+/*Beginning of Caffeine coders button*/
 
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+:root {
+    --glow-color: hsl(186 100% 69%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.glowing-btn {
+    position: relative;
+    color: var(--glow-color);
+    cursor: pointer;
+    padding: 0.35em 1em;
+    border: 0.15em solid var(--glow-color);
+    border-radius: 0.45em;
+    background: none;
+    perspective: 2em;
+    font-family: 'Orbitron', sans-serif;
+    /*font-family: "Raleway", sans-serif;*/
+    font-size: 1em;
+    font-weight: 900;
+    letter-spacing: 1em;
+
+    -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+    -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+    box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+    animation: border-flicker 2s linear infinite;
+}
+
+.glowing-txt {
+    float: left;
+    margin-right: -0.8em;
+    -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em var(--glow-color);
+    -moz-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em var(--glow-color);
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color);
+    animation: text-flicker 3s linear infinite;
+}
+
+.faulty-letter {
+    opacity: 0.5;
+    animation: faulty-flicker 2s linear infinite;
+}
+
+.glowing-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.7;
+    filter: blur(1em);
+    transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
+    background: var(--glow-color);
+    pointer-events: none;
+}
+
+.glowing-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: -1;
+    background-color: var(--glow-color);
+    box-shadow: 0 0 2em 0.2em var(--glow-color);
+    transition: opacity 100ms linear;
+}
+
+.glowing-btn:hover {
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: none;
+    animation: none;
+}
+
+.glowing-btn:hover .glowing-txt {
+    animation: none;
+}
+
+.glowing-btn:hover .faulty-letter {
+    animation: none;
+    text-shadow: none;
+    opacity: 1;
+}
+
+.glowing-btn:hover:before {
+    filter: blur(1.5em);
+    opacity: 1;
+}
+
+.glowing-btn:hover:after {
+    opacity: 1;
+}
+
+@keyframes faulty-flicker {
+    0% {
+        opacity: 0.1;
+    }
+    2% {
+        opacity: 0.1;
+    }
+    4% {
+        opacity: 0.5;
+    }
+    19% {
+        opacity: 0.5;
+    }
+    21% {
+        opacity: 0.1;
+    }
+    23% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0.5;
+    }
+    83% {
+        opacity: 0.4;
+    }
+
+    87% {
+        opacity: 1;
+    }
+}
+
+@keyframes text-flicker {
+    0% {
+        opacity: 0.1;
+    }
+
+    2% {
+        opacity: 1;
+    }
+
+    8% {
+        opacity: 0.1;
+    }
+
+    9% {
+        opacity: 1;
+    }
+
+    12% {
+        opacity: 0.1;
+    }
+    20% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.3;
+    }
+    30% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0.7;
+    }
+    72% {
+        opacity: 0.2;
+    }
+
+    77% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 0.9;
+    }
+}
+
+@keyframes border-flicker {
+    0% {
+        opacity: 0.1;
+    }
+    2% {
+        opacity: 1;
+    }
+    4% {
+        opacity: 0.1;
+    }
+
+    8% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .glowing-btn{
+        font-size: 1em;
+    }
+}
+
+
+.me-2 {
+    margin-right: 0.5rem!important;
+    height: 22px;
+    margin-top: 33px;
+}
+button {
+    padding:unset;
+    padding-right: 10px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #ffffff80;
+    text-shadow: none;
+    background: transparent;
+    box-shadow: transparent;
+    border: none;
+    transition: 0.5s ease;
+    user-select: none;
+}
+.image-button {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 15px;
+}
+/*html,*/
+/*body,*/
+/*h1 {*/
+/*    background-color: black;*/
 /*}*/
+
+body {
+    background-color: transparent !important;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+.page-wrapper{
+    min-height: 100vh;
+    background-image: url("/Img/cyber.gif");
+    background-size: contain;
+}
