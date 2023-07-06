@@ -338,8 +338,8 @@ body {
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
 }
-.page-wrapper{
-    min-height: 100vh;
-    background-image: url("/Img/cyber.gif");
-    background-size: contain;
-}
+/*.page-wrapper{*/
+/*    min-height: 100vh;*/
+/*    background-image: url("/Img/cyber.gif");*/
+/*    background-size: contain;*/
+/*}*/

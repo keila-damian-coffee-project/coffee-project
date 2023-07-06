@@ -8,18 +8,6 @@
           integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 <body>
 <div class="page-wrapper">
-    <!--&lt;!&ndash;                    PREVIOUS NAV BAR IN HEADER&ndash;&gt;-->
-    <!--    <header>-->
-    <!--&lt;!&ndash;        <nav class="navbar bg-body-tertiary-hero">&ndash;&gt;-->
-    <!--&lt;!&ndash;            <div class="container-fluid justify-content-center">&ndash;&gt;-->
-    <!--&lt;!&ndash;                <a class="navbar-brand" href="#">&ndash;&gt;-->
-    <!--&lt;!&ndash;                    <img src="img/coffee.gif" alt="Logo" width="50" height="44"&ndash;&gt;-->
-    <!--&lt;!&ndash;                         class="d-inline-block align-text-top mb-4"></a>&ndash;&gt;-->
-    <!--&lt;!&ndash;                <h1 class=" align text-center">Coffee</h1>&ndash;&gt;-->
-    <!--&lt;!&ndash;            </div>&ndash;&gt;-->
-    <!--&lt;!&ndash;        </nav>&ndash;&gt;-->
-    <!--&lt;!&ndash;        <hr>&ndash;&gt;-->
-    <!--    </header>-->
     <nav class="navbar navbar-expand-lg bg-body-tertiary-hero">
         <div class="container-fluid">
             <img src="Img/coffgiphy.gif" height="120" width="120">
@@ -63,51 +51,63 @@
 
     <div class="container">
         <div class="row">
-            <div class="coffee">
-                <header></header>
-                <p></p>
+
+
+
+<!--original code line to have ASC order-->
+        <div class="col-9"></div>
+<!--bootstrap card template weaved in with rederCoffee function-->
+            <div id="coffees" class="card col-9" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+
+
+
+
+            <!-- Start of Column 2-->
+            <div class="col-3">
+                <div class="d-flex flex-column gap-4">
+                    <form>
+                        <h5>Roast</h5>
+                        <label for="roast-selection"></label>
+                        <select id="roast-selection">
+                            <option class="all-roast-selection">all</option>
+                            <option class="light-roast-selection">light</option>
+                            <option class="medium-roast-selection">medium</option>
+                            <option class="dark-roast-selection">dark</option>
+                        </select>
+
+
+                        <h5 class="mt-3">Coffee Name</h5>
+                        <label for="coffee-name"></label>
+                        <input type="text" id="coffee-name" required>
+                        <input id="submit" type="submit"/>
+                    </form>
+                    <!--                    add a coffee, right side-->
+                    <h1 style="text-align: center;">Add a Coffee</h1>
+                    <label for="roast-selection-add-coffee"></label>
+                    <select id="roast-selection-add-coffee">
+                        <option class="light-roast-selection">light</option>
+                        <option class="medium-roast-selection">medium</option>
+                        <option class="dark-roast-selection">dark</option>
+                    </select>
+                    <form id="coffee-form-add-coffee">
+                        <h5 class="mt-3">Coffee Name</h5>
+                        <label for="coffee-name"></label>
+                        <input type="text" id="coffee-name-add-coffee" required>
+                    </form>
+
+                    <!--                Button-->
+                    </button>
+                    <input id="submit-add-coffee" type="submit"/>
+                </div>
             </div>
         </div>
-        <div class="container" id="coffees"></div>
     </div>
-    <!-- Start of Column 2-->
-    <div class="col-lg-6 col-sm-12">
-        <div class="d-flex flex-column gap-4">
-            <form>
-                <h5>Roast</h5>
-                <label for="roast-selection"></label>
-                <select id="roast-selection">
-                    <option class="all-roast-selection">all</option>
-                    <option class="light-roast-selection">light</option>
-                    <option class="medium-roast-selection">medium</option>
-                    <option class="dark-roast-selection">dark</option>
-                </select>
 
-
-                <h5 class="mt-3">Coffee Name</h5>
-                <label for="coffee-name"></label>
-                <input type="text" id="coffee-name" required>
-                <input id="submit" type="submit"/>
-            </form>
-            <!--                    add a coffee, right side-->
-            <h1 style="text-align: center;">Add a Coffee</h1>
-            <label for="roast-selection-add-coffee"></label>
-            <select id="roast-selection-add-coffee">
-                <option class="light-roast-selection">light</option>
-                <option class="medium-roast-selection">medium</option>
-                <option class="dark-roast-selection">dark</option>
-            </select>
-            <form id="coffee-form-add-coffee">
-                <h5 class="mt-3">Coffee Name</h5>
-                <label for="coffee-name"></label>
-                <input type="text" id="coffee-name-add-coffee" required>
-            </form>
-
-            <!--                Button-->
-            </button>
-            <input id="submit-add-coffee" type="submit"/>
-        </div>
-    </div>
 </div>
 
 
