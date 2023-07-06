@@ -11,7 +11,8 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     let html = '';
-    for (let i = coffees.length - 1; i >= 0; i--) {
+    // TODO: Change this for loop to go in ACS order
+    for(let i = 0; i < coffees.length;i += 1) {
         html += renderCoffee(coffees[i]);
     }
     return html;
@@ -23,7 +24,7 @@ function updateCoffees(e) {
     let searchValue = searchInput.value.trim().toLowerCase(); // Get the search term and convert to lowercase
     let filteredCoffees = [];
     coffees.forEach(function (coffee) {
-        if(coffee.roast.toLowerCase().includes(searchValue) || roastSelection === "all"){
+        if(coffee.name.toLowerCase().includes(searchValue) && selectedRoast === "all"){
             filteredCoffees.push(coffee);
         } else if (coffee.roast === selectedRoast && coffee.name.toLowerCase().includes(searchValue)) {
                 filteredCoffees.push(coffee);
@@ -50,28 +51,21 @@ let coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
-//
-let all = reversedCoffees();
-function reversedCoffees(array) {
 
-    return coffees.reverse('[]');
+// add coffees
+function addCoffees(e) {
+    e.preventDefault();
+    //capturing select input
+    let coffeeType = document.querySelector('#roast-selection-add-coffee').value;
+    //capturing typed input
+    let coffeeName = document.querySelector('#coffee-name-add-coffee').value;
+    //creating new object from input
+    const newCoffee = {id: 15, name: coffeeName, roast: coffeeType}
+    //pushed new object to original array
+    coffees.push(newCoffee);
+    // run renderCoffees with updated array
+    renderCoffees(coffees);
 }
-// // // checking functionality
-// let all = reversedCoffees();
-
-// function myFunction(element) {
-//
-// }
-
-            // our function for trying to get the string from the array of objects
-// function returnTyped (coffees) {
-//     let userInput = ''
-//     const typedCoffees = [];
-//     for(let i = 0; i < coffees.length;i += 1) {
-//         if(coffees[i].roast === userInput.toLowerCase();
-//
-//     }
-// }
 
 
 
@@ -79,9 +73,10 @@ let tbody = document.querySelector('#coffees');
 let submitButton = document.querySelector('#submit');
 let roastSelection = document.querySelector('#roast-selection');
 let searchInput = document.querySelector("#coffee-name")
+let addCoffee = document.querySelector('#submit-add-coffee');
 
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 searchInput.addEventListener("input", updateCoffees)
-
+addCoffee.addEventListener("click", addCoffees);
