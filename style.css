@@ -384,3 +384,51 @@ select#roast-selection {
     padding: 0 9px;
     border-radius: 999px 0px 0px 999px;
 }
+.glowing-txt-coffee {
+    margin-right: -0.8em;
+    -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em var(--glow-color);
+    -moz-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em var(--glow-color);
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color);
+    animation: text-flicker 3s linear infinite;
+}
+.card.coffee{
+    background-color: rgba(102, 51, 153, 0.37);
+    background-blend-mode: multiply;
+    border: 10px solid transparent;
+    padding: 15px;
+    border-image: url(img/cyberpunk-border.png) 30 round;
+    position: relative;
+}
+
+img.card-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 127%;
+    height: 140%;
+    animation: colorchange 5s;
+    animation-iteration-count: infinite;
+    pointer-events: none;
+}
+
+@keyframes colorchange {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
+p.card-text.relative {
+    color: white;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif !important;
+}
+.card-title {
+    margin-bottom: var(--bs-card-title-spacer-y);
+    color: white !important;
+    text-align: center;
+}

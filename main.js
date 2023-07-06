@@ -10,22 +10,20 @@ function renderCoffee(coffee) {
 
     // 1. create a variable to hold the path
     let roastImg;
-    if(coffee.roast === "light"){
-    }
     // 2. check if the roast is light, medium, or dark
 
     // 3. save this correct image path into our variable
 
     // 4. put this variable in the right spot in our "rendered html code"
 
-
     let html = `
         <div class="col-3">
             <div class="card coffee">
-                <img src="${roastImg}" class="card-img-top">
-                <h5 class="card-title">${coffee.name}</h5>
-                <p class="card-text">${coffee.roast}</p>
-                
+                <img src="img/cyberpunk-border.png" class="card-background" alt="card background" />
+                <img src="img/bnsneon.jpeg" class="card-img-top relative">
+                <h5 class="card-title relative">${coffee.name}</h5>
+                <p class="card-text relative">${coffee.roast}</p>
+               
                 
             </div>
         </div>
@@ -92,8 +90,6 @@ function addCoffees(e) {
     renderCoffees(coffees);
 }
 
-
-
 let tbody = document.querySelector('#coffees');
 let submitButton = document.querySelector('#submit');
 let roastSelection = document.querySelector('#roast-selection');
@@ -105,3 +101,14 @@ tbody.innerHTML = renderCoffees(coffees);
 submitButton.addEventListener('click', updateCoffees);
 searchInput.addEventListener("input", updateCoffees)
 addCoffee.addEventListener("click", addCoffees);
+
+let currentlyPlayingSound = false
+document.querySelector('body').addEventListener('click', function(e){
+    if (!currentlyPlayingSound) {
+        currentlyPlayingSound = true;
+        let audioObject = new Audio('./audio/baby-shark.mp3').play();
+        audioObject.addEventListener("ended", function(){
+            currentlyPlayingSound = false;
+        });
+    }
+});
