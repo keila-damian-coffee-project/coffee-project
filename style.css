@@ -338,8 +338,49 @@ body {
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
 }
-/*.page-wrapper{*/
-/*    min-height: 100vh;*/
-/*    background-image: url("/Img/cyber.gif");*/
-/*    background-size: contain;*/
-/*}*/
+.page-wrapper{
+    min-height: 100vh;
+    background-image: url("/Img/cyber.gif");
+    background-size: contain;
+}
+form.d-flex select{
+    margin: 10px;
+    font-family:Orbitron,sans-serif;
+}
+::placeholder {
+    color: #F3FD31;
+}
+
+input#coffee-name {
+    box-shadow: 0 0 2em 0.2em #F3FD31;
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+    border: 1px solid #61EFFFFF;
+    padding: 0 17px;
+    border-radius: 0px;
+    margin-right:-1px;
+}
+input#coffee-name:focus {
+    text-shadow: unset;
+}
+input[type="submit"] {
+    box-shadow: 0 0 2em 0.2em #F3FD31;
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+    border: 1px solid #61EFFFFF;
+    padding: 0 12px;
+    border-radius: 0px 999px 999px 0px;
+}
+select#roast-selection {
+    box-shadow: 0 0 2em 0.2em #F3FD31;
+    background-color: transparent;
+    color: #fff;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: -1px;
+    border: 1px solid #61EFFFFF;
+    padding: 0 9px;
+    border-radius: 999px 0px 0px 999px;
+}

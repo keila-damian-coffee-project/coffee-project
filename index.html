@@ -22,6 +22,7 @@
                         <button class='glowing-btn'><span class='glowing-txt'>C<span
                                 class='faulty-letter'>AFFEINE</span> CO<span class='faulty-letter'>DERS</span></button>
                     </li>
+
                     <li class="nav-item mr-2">
                         <button class="nav-link active-hero mt-3" id="btun-nav" aria-current="page" href="#">Browse Our
                             Shop
@@ -37,30 +38,47 @@
                         </button>
                     </li>
                 </ul>
-                <!-- Start of Search tag and submit button -->
-                <form class="d-flex justify-end" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="image-button" id="btun" type="submit"><img src="Img/gmby.png" alt="Image" height="55"
-                                                                              width="55">Submit
-                    </button>
+                <form class="d-flex">
+                    <p>Roast</p>
+                    <label for="roast-selection"></label>
+                    <select id="roast-selection">
+                        <option class="all-roast-selection">all</option>
+                        <option class="light-roast-selection">light</option>
+                        <option class="medium-roast-selection">medium</option>
+                        <option class="dark-roast-selection">dark</option>
+                    </select>
+
+
+<!--                    <p class="mt-3">Coffee Name</p>-->
+                    <label for="coffee-name"></label>
+                    <input type="text" id="coffee-name" placeholder="Enter Coffee Name">
+                    <input id="submit" type="submit"/>
                 </form>
+
+
+                <!-- Start of Search tag and submit button -->
+<!--                <form class="d-flex justify-end" role="search">-->
+<!--                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">-->
+<!--                    <button class="image-button" id="btun" type="submit"><img src="Img/gmby.png" alt="Image" height="55"-->
+<!--                                                                              width="55">Submit-->
+<!--                    </button>-->
+<!--                </form>-->
                 <!-- End of Search tag and submit button -->
             </div>
         </div>
     </nav>
-
+<!--left side of Hero -->
     <div class="container">
         <div class="row">
 
 
 
 <!--original code line to have ASC order-->
-        <div class="col-9"></div>
+<!--        <div class="col-9"></div>-->
 <!--bootstrap card template weaved in with rederCoffee function-->
-            <div id="coffees" class="card col-9" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="container col-9">
+                <div id="coffees" class="row g-5">
+
                 </div>
             </div>
 
@@ -68,24 +86,24 @@
 
 
             <!-- Start of Column 2-->
-            <div class="col-3">
-                <div class="d-flex flex-column gap-4">
-                    <form>
-                        <h5>Roast</h5>
-                        <label for="roast-selection"></label>
-                        <select id="roast-selection">
-                            <option class="all-roast-selection">all</option>
-                            <option class="light-roast-selection">light</option>
-                            <option class="medium-roast-selection">medium</option>
-                            <option class="dark-roast-selection">dark</option>
-                        </select>
+<!--            <div class="col-3">-->
+<!--                <div class="d-flex flex-column gap-4">-->
+<!--                    <form>-->
+<!--                        <h5>Roast</h5>-->
+<!--                        <label for="roast-selection"></label>-->
+<!--                        <select id="roast-selection">-->
+<!--                            <option class="all-roast-selection">all</option>-->
+<!--                            <option class="light-roast-selection">light</option>-->
+<!--                            <option class="medium-roast-selection">medium</option>-->
+<!--                            <option class="dark-roast-selection">dark</option>-->
+<!--                        </select>-->
 
 
-                        <h5 class="mt-3">Coffee Name</h5>
-                        <label for="coffee-name"></label>
-                        <input type="text" id="coffee-name" required>
-                        <input id="submit" type="submit"/>
-                    </form>
+<!--                        <h5 class="mt-3">Coffee Name</h5>-->
+<!--                        <label for="coffee-name"></label>-->
+<!--                        <input type="text" id="coffee-name" required>-->
+<!--                        <input id="submit" type="submit"/>-->
+<!--                    </form>-->
                     <!--                    add a coffee, right side-->
                     <h1 style="text-align: center;">Add a Coffee</h1>
                     <label for="roast-selection-add-coffee"></label>

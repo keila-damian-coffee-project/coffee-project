@@ -1,10 +1,35 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    let html = '<div class="coffee">';
-    html += '<header>' + coffee.name + '</header>';
-    html += '<p>' + coffee.roast + '</p>';
-    html += '</div>';
+    // let html = '<div class="coffee">';
+    // html += '<header>' + coffee.name + '</header>';
+    // html += '<p>' + coffee.roast + '</p>';
+    // html += '</div>';
+
+    // create a variable that holds the path to the image that we want
+
+    // 1. create a variable to hold the path
+    let roastImg;
+    if(coffee.roast === "light"){
+    }
+    // 2. check if the roast is light, medium, or dark
+
+    // 3. save this correct image path into our variable
+
+    // 4. put this variable in the right spot in our "rendered html code"
+
+
+    let html = `
+        <div class="col-3">
+            <div class="card coffee">
+                <img src="${roastImg}" class="card-img-top">
+                <h5 class="card-title">${coffee.name}</h5>
+                <p class="card-text">${coffee.roast}</p>
+                
+                
+            </div>
+        </div>
+    `;
 
     return html;
 }
