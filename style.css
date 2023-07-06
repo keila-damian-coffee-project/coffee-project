@@ -7,13 +7,13 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
-/*header{*/
-/*    background-color: #E1DBC5;*/
-/*}*/
+header{
+    background-color: #E1DBC5;
+}
 
-/*.bg-body-tertiary-hero {*/
-/*    background-color:#E1DBC5;*/
-/*}*/
+.bg-body-tertiary-hero {
+    background-color:#E1DBC5;
+}
 hr{
     width: 95%;
 }
@@ -58,11 +58,12 @@ button {
     font-size: 16px;
     border-color: transparent;
 }
-body{
-    background-size:contain;
-    background-repeat: no-repeat;
+/*body{*/
+/*    background-image: url("img/cyber.gif");*/
+/*    background-size:cover;*/
+/*    background-repeat: no-repeat;*/
 
-}
-img{
+/*}*/
+/*img{*/
 
-}
+/*}*/
