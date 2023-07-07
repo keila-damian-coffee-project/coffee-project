@@ -409,7 +409,7 @@ img.card-background {
     transform: translate(-50%, -50%);
     width: 127%;
     height: 140%;
-    animation: colorchange 5s;
+    animation: colorchange 1s;
     animation-iteration-count: infinite;
     pointer-events: none;
 }

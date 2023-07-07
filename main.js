@@ -92,12 +92,12 @@ addCoffee.addEventListener("click", addCoffees);
 
             // Sound if we use it
 let currentlyPlayingSound = false
-// document.querySelector('body').addEventListener('click', function(e){
-//     if (!currentlyPlayingSound) {
-//         currentlyPlayingSound = true;
-//         let audioObject = new Audio('./audio/baby-shark.mp3').play();
-//         audioObject.addEventListener("ended", function(){
-//             currentlyPlayingSound = false;
-//         });
-//     }
-// });
+document.querySelector('body').addEventListener('click', function(e){
+    if (!currentlyPlayingSound) {
+        currentlyPlayingSound = true;
+        let audioObject = new Audio('./audio/whatittakes.mp3').play();
+        audioObject.addEventListener("ended", function(){
+            currentlyPlayingSound = false;
+        });
+    }
+});
