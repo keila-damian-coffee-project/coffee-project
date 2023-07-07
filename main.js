@@ -5,7 +5,7 @@ function renderCoffee(coffee) {
         <div class="col-3">
             <div class="card coffee">
                 <img src="img/cyberpunk-border.png" class="card-background" alt="card background" />
-                <img src="img/bnsneon.jpeg" class="card-img-top relative">
+                <img src="img/bnsneon.jpeg" class="card-img-top relative"/>
                 <h5 class="card-title relative">${coffee.name}</h5>
                 <p class="card-text relative">${coffee.roast}</p>
                
@@ -86,6 +86,8 @@ tbody.innerHTML = renderCoffees(coffees);
 submitButton.addEventListener('click', updateCoffees);
 searchInput.addEventListener("input", updateCoffees)
 addCoffee.addEventListener("click", addCoffees);
+
+
 
 
             // Sound if we use it
