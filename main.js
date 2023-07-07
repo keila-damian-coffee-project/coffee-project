@@ -1,21 +1,6 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    // let html = '<div class="coffee">';
-    // html += '<header>' + coffee.name + '</header>';
-    // html += '<p>' + coffee.roast + '</p>';
-    // html += '</div>';
-
-    // create a variable that holds the path to the image that we want
-
-    // 1. create a variable to hold the path
-    let roastImg;
-    // 2. check if the roast is light, medium, or dark
-
-    // 3. save this correct image path into our variable
-
-    // 4. put this variable in the right spot in our "rendered html code"
-
     let html = `
         <div class="col-3">
             <div class="card coffee">
@@ -24,7 +9,7 @@ function renderCoffee(coffee) {
                 <h5 class="card-title relative">${coffee.name}</h5>
                 <p class="card-text relative">${coffee.roast}</p>
                
-                
+       
             </div>
         </div>
     `;
@@ -102,13 +87,15 @@ submitButton.addEventListener('click', updateCoffees);
 searchInput.addEventListener("input", updateCoffees)
 addCoffee.addEventListener("click", addCoffees);
 
+
+            // Sound if we use it
 let currentlyPlayingSound = false
-document.querySelector('body').addEventListener('click', function(e){
-    if (!currentlyPlayingSound) {
-        currentlyPlayingSound = true;
-        let audioObject = new Audio('./audio/baby-shark.mp3').play();
-        audioObject.addEventListener("ended", function(){
-            currentlyPlayingSound = false;
-        });
-    }
-});
+// document.querySelector('body').addEventListener('click', function(e){
+//     if (!currentlyPlayingSound) {
+//         currentlyPlayingSound = true;
+//         let audioObject = new Audio('./audio/baby-shark.mp3').play();
+//         audioObject.addEventListener("ended", function(){
+//             currentlyPlayingSound = false;
+//         });
+//     }
+// });
